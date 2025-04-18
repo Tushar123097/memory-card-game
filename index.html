@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="container mx-auto max-w-4xl">
+        <!-- Game Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 animate-bounce">Memory Card Game</h1>
+            <div class="flex justify-center items-center gap-4 text-white">
+                <div class="text-xl">
+                    <span class="font-bold">Moves:</span>
+                    <span id="moves">0</span>
+                </div>
+                <div class="text-xl">
+                    <span class="font-bold">Time:</span>
+                    <span id="time">00:00</span>
+                </div>
+                <button id="restart" class="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-100 transition-all">
+                    <i class="fas fa-redo mr-2"></i>Restart
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="game-board">
+            <!-- Cards will be generated here -->
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+            <div class="bg-white p-8 rounded-lg text-center transform scale-0 transition-transform duration-300">
+                <h2 class="text-3xl font-bold text-purple-600 mb-4">Congratulations!</h2>
+                <p class="text-xl mb-4">You completed the game in <span id="final-moves">0</span> moves and <span id="final-time">00:00</span>!</p>
+                <button id="play-again" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
